@@ -1,0 +1,38 @@
+# This is a sample plugin.yml
+# For more infomration refer to http://wiki.bukkit.org/Plugin_YAML
+main: edu.unca.smmattic.SpoutItemTutorial.SpoutItemTutorial
+name: SpoutItemTutorial
+version: 0.0.1-SNAPSHOT
+author: SampleAuthor
+description: This is a sample plugin for Spout and Bukkit
+commands:
+  message:
+    description: set the greeting message
+    usage: /<command> greeting message
+    permission: SpoutItemTutorial.message
+  changeMe:
+    description: gives player new skin
+    usage: /<command>
+    permission: SpoutItemTutorial.changeMe
+  changeMeBack:
+    description: returns player's skin
+    usage: /<command>
+    permission: SpoutItemTutorial.changeMeBack
+  cookiePlease:
+    description: turns player into a cookie
+    usage: /<command>
+    permission: SpoutItemTutorial.cookiePlease
+permissions:
+  SpoutItemTutorial.*:
+    description: gives all permissions of the plugin commands
+    default: true
+    children:
+      SpoutItemTutorial.message:
+        default: true
+      SpoutItemTutorial.changeMe:
+        default: true
+      SpoutItemTutorial.changeMeBack:
+        default: true
+      SpoutItemTutorial.cookiePlease:
+        default: true
+        
